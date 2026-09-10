@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>地区详情 - 红河苗族服饰</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">← 红河苗族服饰</a>
+    <div class="nav-links" id="navLinks"></div>
+  </div>
+</nav>
+
+<main class="detail" id="detailRoot">
+  <button class="back-btn" onclick="location.href='index.html'">← 返回首页</button>
+  <div class="detail-loading">正在加载地区数据…</div>
+</main>
+
+<!-- 部件详情弹窗 -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div class="modal-media">
+      <img id="modalImg" src="" alt="">
+    </div>
+    <div class="modal-text">
+      <span class="modal-tag" id="modalTag"></span>
+      <h3 id="modalTitle"></h3>
+      <p class="modal-sub" id="modalSub"></p>
+      <div class="modal-desc" id="modalDesc"></div>
+    </div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/detail.js"></script>
+</body>
+</html>

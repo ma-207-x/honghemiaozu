@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>红河苗族服饰 · 五地衣韵</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="#top">🎭 红河苗族服饰</a>
+    <div class="nav-links">
+      <a href="#top" class="active">首页</a>
+      <a href="#video">总览视频</a>
+      <a href="#regions">五地衣韵</a>
+      <span class="nav-sep">·</span>
+      <a href="detail.html?region=pingbian">屏边</a>
+      <a href="detail.html?region=jinping">金平</a>
+      <a href="detail.html?region=hekou">河口</a>
+      <a href="detail.html?region=mile">弥勒</a>
+      <a href="detail.html?region=mengzi">蒙自</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero：全屏 + 总介绍视频 -->
+<section class="hero" id="top">
+  <video class="hero-video" id="heroVideo" autoplay muted loop playsinline poster="images/placeholder.svg">
+    <source src="videos/hero/overview.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="kicker">Honghe · Miao Costume</p>
+    <h1>红河苗族服饰</h1>
+    <p class="subtitle">头饰是身份证 · 服色是支系名</p>
+    <p class="intro">在云南红河连绵的群山之间，苗族世代生息。他们把历史绣在衣上，把故事缝进裙间。屏边、金平、河口、弥勒、蒙自——五地五妆，共同织就穿在身上的无字史书。</p>
+    <div class="hero-actions">
+      <button class="hero-btn" onclick="document.getElementById('regions').scrollIntoView({behavior:'smooth'})">
+        探索五地服饰 ↓
+      </button>
+      <button class="hero-btn ghost" id="muteBtn" onclick="toggleMute()">🔊 开启声音</button>
+    </div>
+  </div>
+  <div class="scroll-hint" onclick="document.getElementById('video').scrollIntoView({behavior:'smooth'})">↓</div>
+</section>
+
+<!-- 总介绍视频专区 -->
+<section class="intro-video" id="video">
+  <div class="section-head">
+    <h2>总览 · 红河苗族服饰之美</h2>
+    <p class="motto">AI 数字引子 · 穿在身上的无字史书</p>
+  </div>
+  <div class="video-frame">
+    <video controls preload="metadata" poster="images/placeholder.svg">
+      <source src="videos/hero/overview.mp4" type="video/mp4">
+      您的浏览器不支持 video 标签。
+    </video>
+  </div>
+</section>
+
+<!-- 五地卡片 -->
+<section class="regions" id="regions">
+  <div class="section-head">
+    <h2>五地衣韵</h2>
+    <p class="motto">屏边看头饰 · 金平看色彩 · 河口看头饰 · 弥勒看色彩 · 蒙自看盛装</p>
+    <p class="hint">点击地区卡片，进入详情页查看虚拟形象与服饰部件分解</p>
+  </div>
+  <div class="card-grid" id="cardGrid"></div>
+</section>
+
+<footer class="footer">
+  <p>红河苗族服饰数字展 · 数据驱动展示 · 仅供文化与教育用途</p>
+  <p class="foot-note">部分服饰为 AI 辅助生成示意，公开上线前请结合当地资料核实文化细节</p>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
